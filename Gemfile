@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
   
 group :test do
-  gem 'json', '~> 1.7', :platforms => [:ruby_18, :jruby]
-  gem 'rspec', '~> 2.13.0'
-  gem 'vcr', '~> 2.4.0'
-  gem 'webmock', '~> 1.9.0'
+  gem 'json', '~> 1.8.1', :platforms => [:ruby_18, :jruby]
+  gem 'rspec', '~> 2.14.1'
+  gem 'vcr', '~> 2.8.0'
+  gem 'webmock', '~> 1.17.3'
+  gem 'factory_girl', "~> 4.4.0"
 end
 
 group :development do
