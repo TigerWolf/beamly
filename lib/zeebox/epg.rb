@@ -8,6 +8,7 @@ module Zeebox
         Curl.get(BASE_URI + EPG_URI + url) do |http|
           http.headers['zeebox-app-id'] = Zeebox.configuration.id
           http.headers['zeebox-app-key'] = Zeebox.configuration.key
+        end
       end
     end
 

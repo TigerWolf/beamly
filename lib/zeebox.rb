@@ -1,4 +1,5 @@
 require 'zeebox/epg'
+require 'zeebox/configuration'
 require 'curb'
 
 # Ruby toolkit for the Zeebox API
