@@ -12,12 +12,13 @@ end
 #VCR config
 VCR.configure do |c|
   c.configure_rspec_metadata!
+  c.allow_http_connections_when_no_cassette = true
   # c.filter_sensitive_data("<ZEEBOX_APIKEY>") do
   #   zeebox_login
   # end
   c.default_cassette_options = {
     :serialize_with => :json,
-
+    :record => :once
   }
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
