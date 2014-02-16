@@ -1,3 +1,5 @@
+require 'json'
+
 module Zeebox
   class Epg
 
@@ -5,15 +7,16 @@ module Zeebox
 
     class << self
       def get(url)
-        Curl.get(BASE_URI + EPG_URI + url) do |http|
+        response = Curl.get(BASE_URI + EPG_URI + url) do |http|
           http.headers['zeebox-app-id'] = Zeebox.configuration.id
           http.headers['zeebox-app-key'] = Zeebox.configuration.key
-        end.body_str
+        end
+        JSON.parse response.body_str
       end
     end
 
     def regions
-      self.class.get('1/regions')
+      self.class.get('AU/regions')
     end
 
 
