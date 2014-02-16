@@ -25,7 +25,8 @@ describe Zeebox::Epg do
 
 
     it "must perform the request and get the data" do
-      expect(epg.regions.any? {|h| h["name"] == "NSW: Sydney"}).to be_true#("NSW: Sydney")
+      #TODO: make this less fragile and probably use a better rspec matcher
+      expect(epg.regions.any? {|h| h["name"] == "NSW: Sydney"}).to be_true
       
     end
   end
