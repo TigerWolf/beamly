@@ -19,6 +19,13 @@ module Zeebox
       self.class.get('AU/regions')
     end
 
+    def catalogues(region)
+      self.class.get("which-catalogue?country=au&region=48&provider=AU")
+    end
+
+    def epg(id)
+      self.class.get("epg/#{id}")
+    end
 
   end
 end
