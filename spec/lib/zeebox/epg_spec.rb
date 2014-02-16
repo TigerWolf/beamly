@@ -2,10 +2,12 @@ require_relative '../../spec_helper'
 
 describe Zeebox::Epg, :vcr do
 
+  let(:epg) { Zeebox::Epg.new }
+
   describe "GET epg" do
 
-    it "records the fixture" do
-      Zeebox::Epg.get('/epg/1')
+    it "must have a regions method" do
+      expect(epg).to respond_to :regions
     end
   end
 
