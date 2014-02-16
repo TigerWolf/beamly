@@ -16,8 +16,9 @@ module Zeebox
     end
 
     def configure
-      yield(configuration)
+      yield configuration
     end
+    alias_method :config, :configuration
   end  
 
 end

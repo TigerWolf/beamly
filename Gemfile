@@ -6,6 +6,7 @@ group :test do
   gem 'vcr', '~> 2.8.0'
   gem 'webmock', '~> 1.17.3'
   gem 'factory_girl', "~> 4.4.0"
+  gem 'pry'
 end
 
 group :development do
