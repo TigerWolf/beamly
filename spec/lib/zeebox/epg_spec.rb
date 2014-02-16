@@ -1,21 +1,12 @@
 require_relative '../../spec_helper'
 
-describe Zeebox::Epg do
+describe Zeebox::Epg, :vcr do
 
-  it "must work" do
-    expect("Yay").to be_a String
-  end
+  describe "GET epg" do
 
-  describe "default attributes" do
-
-    it "have api url" do
-      Zeebox::Epg.base_url.must_equal 'https://api-au.zeebox.com'
+    it "records the fixture" do
+      Zeebox::Epg.get('/epg/1')
     end
-
-    it "have curb methods" do
-      should be_kind_of(Curl)
-    end
-
   end
 
 end
