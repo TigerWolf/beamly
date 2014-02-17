@@ -94,4 +94,30 @@ describe Zeebox::Epg do
     end
   end
 
+
+  describe "GET epg schedule" do
+
+    it "must have a schedule method" do
+      expect(epg).to respond_to :schedule
+    end
+
+  end
+
+
+  describe "GET epg broadcast event" do
+
+    it "must have a broadcast_event method" do
+      expect(epg).to respond_to :broadcast_event
+    end
+
+  end
+
+
+  describe "GET epg episode" do
+
+    it "must have a episode method" do
+      expect(epg).to respond_to :episode
+    end
+
+  end
 end
