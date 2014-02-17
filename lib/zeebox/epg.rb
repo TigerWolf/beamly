@@ -10,17 +10,28 @@ module Zeebox
         response = Curl.get(BASE_URI + EPG_URI + url) do |http|
           http.headers['zeebox-app-id'] = Zeebox.configuration.id
           http.headers['zeebox-app-key'] = Zeebox.configuration.key
+          http.headers["Accept-Encoding"] = "gzip,deflate"
+          http.follow_location = true
         end
-        JSON.parse response.body_str
+        #TODO: This gives us better error handling but should be handled in a better way
+        return "" if response.body_str.empty?
+        gz = Zlib::GzipReader.new(StringIO.new(response.body_str))
+        json = gz.read
+        JSON.parse json
       end
     end
 
     def regions
-      self.class.get('AU/regions')
+      self.class.get('au/regions')
     end
 
-    def catalogues(region)
-      self.class.get("which-catalogue?country=au&region=48&provider=AU")
+    def providers
+      self.class.get('au/providers')
+    end
+
+    def catalogues(region, provider)
+      url = Curl::urlalize("which-catalogue?", {:country => 'au', :region => region, :provider => provider})
+      self.class.get("#{url}")
     end
 
     def epg(id)

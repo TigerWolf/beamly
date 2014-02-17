@@ -10,25 +10,6 @@ describe Zeebox::Epg do
     config.key = test_zeebox_key
   end
 
-  describe "GET epg" do
-    it "must have a epg method" do
-      expect(epg).to respond_to :epg
-    end
-
-    it "must parse the api response from JSON to Array" do
-      expect(epg.epg(1)).to be_a(Array)
-    end
-
-    it "must parse the api response from JSON to Hash" do
-      expect(epg.epg(1).first).to be_a(Hash)
-    end
-
-
-    it "must perform the request and get the data" do
-      #TODO: make this less fragile and probably use a better rspec matcher
-      #expect(epg.epg.any? {|h| h["name"] == "NSW: Sydney"}).to be_true
-    end
-  end
 
   describe "GET epg regions" do
 
@@ -51,6 +32,27 @@ describe Zeebox::Epg do
     end
   end
 
+  describe "GET epg providers" do
+
+    it "must have a regions method" do
+      expect(epg).to respond_to :providers
+    end
+
+    it "must parse the api response from JSON to Array" do
+      expect(epg.providers).to be_a(Array)
+    end
+
+    it "must parse the api response from JSON to Hash" do
+      expect(epg.providers.first).to be_a(Hash)
+    end
+
+    it "must perform the request and get the data" do
+      #TODO: make this less fragile and probably use a better rspec matcher
+      expect(epg.providers.any? {|h| h["name"] == "Foxtel"}).to be_true
+      expect(epg.providers.any? {|h| h["name"] == "Free-to-air/Freeview"}).to be_true
+    end
+  end
+
   describe "GET epg catalogues" do
 
     it "must have a catalogues method" do
@@ -58,18 +60,37 @@ describe Zeebox::Epg do
     end
 
     it "must parse the api response from JSON to Array" do
-      expect(epg.catalogues(48)).to be_a(Array)
+      expect(epg.catalogues(48,1)).to be_a(Array)
     end
 
     it "must parse the api response from JSON to Hash" do
-      expect(epg.catalogues(48).first).to be_a(Hash)
+      expect(epg.catalogues(48,1).first).to be_a(Hash)
     end
 
     it "must perform the request and get the data" do
-      binding.pry
       #TODO: make this less fragile and probably use a better rspec matcher
-      #expect(epg.catalogues(48).any? {|h| h["name"] == "NSW: Sydney"}).to be_true
+      expect(epg.catalogues(48,1).any? {|h| h["display_label"] == "Foxtel"}).to be_true
 
+    end
+  end
+
+  describe "GET epg" do
+    it "must have a epg method" do
+      expect(epg).to respond_to :epg
+    end
+
+    it "must parse the api response from JSON to Array" do
+      expect(epg.epg("p1:r48")).to be_a(Array)
+    end
+
+    it "must parse the api response from JSON to Hash" do
+      expect(epg.epg("p1:r48").first).to be_a(Hash)
+    end
+
+
+    it "must perform the request and get the data" do
+      #TODO: make this less fragile and probably use a better rspec matcher
+      expect(epg.epg("p1:r48").any? {|h| h["channel_name"] == "FOX SPORTS 1"}).to be_true
     end
   end
 
