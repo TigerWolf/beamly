@@ -87,7 +87,6 @@ describe Zeebox::Epg do
       expect(epg.epg("p1:r48").first).to be_a(Hash)
     end
 
-
     it "must perform the request and get the data" do
       #TODO: make this less fragile and probably use a better rspec matcher
       expect(epg.epg("p1:r48").any? {|h| h["channel_name"] == "FOX SPORTS 1"}).to be_true
@@ -101,6 +100,20 @@ describe Zeebox::Epg do
       expect(epg).to respond_to :schedule
     end
 
+    let(:date) { Date.today.strftime("%Y/%m/%d") }
+
+    it "must parse the api response from JSON to Array" do
+      expect(epg.schedule(469,date)).to be_a(Array)
+    end
+
+    it "must parse the api response from JSON to Hash" do
+      expect(epg.schedule(469,date).first).to be_a(Hash)
+    end
+
+    it "must perform the request and get the data" do
+      #TODO: make this less fragile and probably use a better rspec matcher - also use web mock to not use live data
+      expect(epg.schedule(469,date).count).to be > 1
+    end
   end
 
 

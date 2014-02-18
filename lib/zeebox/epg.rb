@@ -38,5 +38,9 @@ module Zeebox
       self.class.get("epg/#{id}")
     end
 
+    def schedule(id,date)
+      self.class.get("service/#{id}/#{date}")
+    end
+
   end
 end
