@@ -42,5 +42,13 @@ module Zeebox
       self.class.get("service/#{id}/#{date}")
     end
 
+    def broadcast_event(id)
+      self.class.get("broadcastevent/#{id}")
+    end
+
+    def episode(id)
+      self.class.get("episode/#{id}")
+    end
+
   end
 end
