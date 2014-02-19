@@ -22,8 +22,8 @@ Add a file `config/initializers/zeebox.rb`` containing:
 
 ```
 Zeebox.configure do |config|
-  config.id = 'c9a8a7fb'
-  config.key = '1009de15cb2d654b060a90ddffcc6c5c'
+  config.id = 'akdwad'
+  config.key = '24144de132cb2d622bzxz60a90ggasffcc6c5c'
 end
 ```
 
