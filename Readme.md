@@ -30,3 +30,9 @@ end
 ## Methods
 
 ``Zeebox::Epg.regions`` returns an array of all of the regions.
+``Zeebox::Epg.providers`` returns an array of all of the regions.
+``Zeebox::Epg.catalogues(region, provider)`` returns an array of all of the catalogues. Provide a region id and provider id.
+``Zeebox::Epg.epg(id)`` returns an array of the epg. Id is from the catalogues reguest.
+``Zeebox::Epg.schedule(id,date)`` returns an array of the schedules. Provide a service id from the epg request and a date in the format YYYY/MM/DD
+``Zeebox::Epg.broadcast_event(id)`` returns an hash of a broadcast event. Provide an id from the schedule request
+``Zeebox::Epg.episode(id)`` returns an hash of a episode event. Provide an id from the schedule request
