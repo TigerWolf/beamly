@@ -4,12 +4,11 @@ describe Zeebox::Epg do
 
   let(:epg) { Zeebox::Epg.new }
 
-  #TODO: Maybe set this in spec helper or similar
+  #TODO: Set this in spec helper when used in more than one spec
   Zeebox.configure do |config|
     config.id = test_zeebox_id
     config.key = test_zeebox_key
   end
-
 
   describe "GET epg regions" do
 
@@ -123,6 +122,36 @@ describe Zeebox::Epg do
       expect(epg).to respond_to :broadcast_event
     end
 
+    it "must parse the api response from JSON to Array" do
+      expect(epg.broadcast_event(14077656)).to be_a(Hash)
+    end
+
+    it "must parse the api response and include the correct attributes" do
+      expect(epg.broadcast_event(14077656).keys).to eq(
+        [
+          "bce",
+          "b",
+          "desc",
+          "start",
+          "end",
+          "brand_id",
+          "series_id",
+          "eid",
+          "g",
+          "img",
+          "title",
+          "offair",
+          "src",
+          "aired_by",
+          "is_new",
+          "is_live"
+      ])
+    end
+
+    it "must perform the request and get the data" do
+      #TODO: make this less fragile and probably use a better rspec matcher - also use web mock to not use live data
+      expect(epg.broadcast_event(14077656).count).to be > 1
+    end
   end
 
 
@@ -130,6 +159,24 @@ describe Zeebox::Epg do
 
     it "must have a episode method" do
       expect(epg).to respond_to :episode
+    end
+
+    it "must parse the api response from JSON to Hash" do
+      expect(epg.episode(469)).to be_a(Hash)
+    end
+
+    it "must parse the api response and include the correct attributes" do
+      expect(epg.episode(469).keys).to eq([
+        "episode_id",
+        "title",
+        "image",
+        "description",
+        "genre_ids",
+        "brand",
+        "credits",
+        "slug",
+        "twitter_searches"
+      ])
     end
 
   end
