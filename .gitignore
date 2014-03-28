@@ -1,0 +1,6 @@
+.bundle
+.config
+Gemfile.lock
+tmp
+spec/cassettes
+Notes.md
