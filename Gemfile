@@ -6,15 +6,18 @@ group :test do
   gem 'vcr', '~> 2.8.0'
   gem 'webmock', '~> 1.17.3'
   gem 'factory_girl', "~> 4.4.0"
-  gem 'pry'
+
 end
 
 group :development do
   gem 'awesome_print', :require => 'ap'
   gem 'guard-rspec', '~> 2.5.1'
   gem 'hirb-unicode'
-  gem 'pry'
   gem 'yard'
+end
+
+group :test, :development do
+  gem 'pry'
 end
 
 gemspec

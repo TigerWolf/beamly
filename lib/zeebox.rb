@@ -1,6 +1,7 @@
 require 'zeebox/epg'
 require 'zeebox/configuration'
 require 'curb'
+require 'hashie'
 
 # Ruby toolkit for the Zeebox API
 module Zeebox

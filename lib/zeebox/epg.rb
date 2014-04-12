@@ -17,7 +17,12 @@ module Zeebox
         return "" if response.body_str.empty?
         gz = Zlib::GzipReader.new(StringIO.new(response.body_str))
         json = gz.read
-        JSON.parse json
+        result = JSON.parse json
+        if result.is_a? Array
+          result.collect! { |x| x.is_a?(Hash) ? Hashie::Mash.new(x) : x }
+        else
+          result = Hashie::Mash.new(result)
+        end
       end
     end
 
