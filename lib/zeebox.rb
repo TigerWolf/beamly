@@ -1,3 +1,4 @@
+require 'zeebox/client'
 require 'zeebox/epg'
 require 'zeebox/configuration'
 require 'curb'

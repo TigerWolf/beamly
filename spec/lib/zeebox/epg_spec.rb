@@ -30,7 +30,7 @@ describe Zeebox::Epg do
 
     it "must perform the request and get the data" do
       #TODO: make this less fragile and probably use a better rspec matcher
-      expect(epg.regions.any? {|h| h.name == "NSW: Sydney"}).to be_true
+      expect(epg.regions.any? {|h| h.name == "NSW: Sydney"}).to be true
 
     end
   end
@@ -51,8 +51,8 @@ describe Zeebox::Epg do
 
     it "must perform the request and get the data" do
       #TODO: make this less fragile and probably use a better rspec matcher
-      expect(epg.providers.any? {|h| h.name == "Foxtel"}).to be_true
-      expect(epg.providers.any? {|h| h.name == "Free-to-air/Freeview"}).to be_true
+      expect(epg.providers.any? {|h| h.name == "Foxtel"}).to be true
+      expect(epg.providers.any? {|h| h.name == "Free-to-air/Freeview"}).to be true
     end
   end
 
@@ -72,7 +72,7 @@ describe Zeebox::Epg do
 
     it "must perform the request and get the data" do
       #TODO: make this less fragile and probably use a better rspec matcher
-      expect(epg.catalogues(48,1).any? {|h| h.display_label == "Foxtel"}).to be_true
+      expect(epg.catalogues(48,1).any? {|h| h.display_label == "Foxtel"}).to be true
 
     end
   end
@@ -92,7 +92,7 @@ describe Zeebox::Epg do
 
     it "must perform the request and get the data" do
       #TODO: make this less fragile and probably use a better rspec matcher
-      expect(epg.epg("p1:r48").any? {|h| h.channel_name == "FOX SPORTS 1"}).to be_true
+      expect(epg.epg("p1:r48").any? {|h| h.channel_name == "FOX SPORTS 1"}).to be true
     end
   end
 
