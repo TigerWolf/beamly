@@ -7,5 +7,9 @@ module Zeebox
       send(option)
     end
 
+    def region
+      @region || 'AU'
+    end
+
   end
 end

@@ -3,19 +3,19 @@ require_relative 'spec_helper'
 describe Zeebox do
 
   it "have api url" do
-      expect(Zeebox::BASE_URI).to eq('https://api-au.zeebox.com')
+    expect(Zeebox.base_uri).to eq('https://api-au.zeebox.com')
   end
 
   describe ".configuration" do
     example do
-      described_class.configuration.should be_a(Zeebox::Configuration)
+      expect(described_class.configuration).to be_a(Zeebox::Configuration)
     end
   end
 
 
   describe ".config" do
     example do
-      described_class.config.should be_a(Zeebox::Configuration)
+      expect(described_class.config).to be_a(Zeebox::Configuration)
     end
   end
 
@@ -26,8 +26,8 @@ describe Zeebox do
         config.key = test_zeebox_key
       end
 
-      described_class.config.id.should == test_zeebox_id
-      described_class.config.key.should == test_zeebox_key
+      expect(described_class.config.id).to eq(test_zeebox_id)
+      expect(described_class.config.key).to eq(test_zeebox_key)
     end
   end
 end

@@ -25,9 +25,8 @@ module Zeebox
     alias_method :config, :configuration
 
     def base_uri
-      region = AU
       if ['US','UK','AU'].include? @configuration.region
-        region = @configuration.region
+        region = self.const_get(@configuration.region)
       end
       "https://#{region}.zeebox.com"
     end
