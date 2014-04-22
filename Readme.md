@@ -8,7 +8,7 @@ https://develop.zeebox.com/admin/applications
 
 This gem is still in development and will change dramatically until it is released on ruby gems. Keep this in mind if you plan to use this in a production environment as its not recommended.
 
-The gem only currently supports AU region but will support all in the future.
+The gem is only tested against the AU region currently.
 
 ## Installation
 
@@ -24,6 +24,7 @@ Add a file `config/initializers/zeebox.rb`` containing:
 Zeebox.configure do |config|
   config.id = 'akdwad'
   config.key = '24144de132cb2d622bzxz60a90ggasffcc6c5c'
+  config.region = 'AU'
 end
 ```
 
