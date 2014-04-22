@@ -2,7 +2,7 @@ module Zeebox
   class Client
     EPG_URI = "/epg/1/"
     def self.get(url)
-      response = Curl.get(BASE_URI + EPG_URI + url) do |http|
+      response = Curl.get(Zeebox.base_uri + EPG_URI + url) do |http|
         http.headers['zeebox-app-id'] = Zeebox.configuration.id
         http.headers['zeebox-app-key'] = Zeebox.configuration.key
         http.headers["Accept-Encoding"] = "gzip,deflate"

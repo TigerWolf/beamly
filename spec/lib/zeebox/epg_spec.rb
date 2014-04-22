@@ -8,6 +8,7 @@ describe Zeebox::Epg do
   Zeebox.configure do |config|
     config.id = test_zeebox_id
     config.key = test_zeebox_key
+    config.region = 'AU'
   end
 
   describe "GET epg regions" do

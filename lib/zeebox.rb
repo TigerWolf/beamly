@@ -7,7 +7,9 @@ require 'hashie'
 # Ruby toolkit for the Zeebox API
 module Zeebox
 
-  BASE_URI = 'https://api-au.zeebox.com'
+  US = 'api'
+  UK = 'api-uk'
+  AU = 'api-au'
 
   class << self
 
@@ -21,6 +23,15 @@ module Zeebox
       yield configuration
     end
     alias_method :config, :configuration
+
+    def base_uri
+      region = AU
+      if ['US','UK','AU'].include? @configuration.region
+        region = @configuration.region
+      end
+      "https://#{region}.zeebox.com"
+    end
+
   end  
 
 end

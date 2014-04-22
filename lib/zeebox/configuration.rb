@@ -1,8 +1,7 @@
 module Zeebox
   class Configuration
 
-    attr_accessor :id
-    attr_accessor :key
+    attr_accessor :id, :key, :region
 
     def [](option)
       send(option)
