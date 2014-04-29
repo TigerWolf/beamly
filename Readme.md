@@ -1,5 +1,7 @@
 # Zeebox Gem
 
+[![Gem Version](https://badge.fury.io/rb/zeebox.svg)](http://badge.fury.io/rb/zeebox)
+
 Create an account on the zeebox developers website to get your api keys.
 
 https://develop.zeebox.com/admin/applications
