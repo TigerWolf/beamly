@@ -1,5 +1,5 @@
 #we need the actual library file
-require_relative '../lib/zeebox'
+require_relative '../lib/beamly'
  
 #dependencies
 require 'rspec'
@@ -10,11 +10,11 @@ require 'pry'
 VCR.configure do |c|
   c.configure_rspec_metadata!
   c.allow_http_connections_when_no_cassette = true
-  c.filter_sensitive_data("<ZEEBOX_ID>") do
-     test_zeebox_id
+  c.filter_sensitive_data("<BEAMLY_ID>") do
+     test_beamly_id
   end
-  c.filter_sensitive_data("<ZEEBOX_KEY>") do
-     test_zeebox_key
+  c.filter_sensitive_data("<BEAMLY_KEY>") do
+     test_beamly_key
   end
   c.default_cassette_options = {
     :serialize_with => :json,
@@ -24,10 +24,10 @@ VCR.configure do |c|
   c.hook_into :webmock
 end
 
-def test_zeebox_id
-  ENV.fetch 'ZEEBOX_TEST_ID', '123abc'
+def test_beamly_id
+  ENV.fetch 'BEAMLY_TEST_ID', '123abc'
 end
 
-def test_zeebox_key
-  ENV.fetch 'ZEEBOX_TEST_KEY', 'wow_such_key'
+def test_beamly_key
+  ENV.fetch 'BEAMLY_TEST_KEY', 'wow_such_key'
 end

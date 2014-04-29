@@ -8,5 +8,5 @@ task :test => :spec
 task :default => :spec
 
 task :console do
-  exec "pry -r zeebox -I ./lib"
+  exec "pry -r beamly -I ./lib"
 end

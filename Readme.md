@@ -1,10 +1,10 @@
-# Zeebox Gem
+# Beamly Gem
 
-[![Gem Version](https://badge.fury.io/rb/zeebox.svg)](http://badge.fury.io/rb/zeebox)
+[![Gem Version](https://badge.fury.io/rb/beamly.svg)](http://badge.fury.io/rb/beamly)
 
-Create an account on the zeebox developers website to get your api keys.
+Create an account on the beamly developers website to get your api keys.
 
-https://develop.zeebox.com/admin/applications
+https://develop.beamly.com/admin/applications
 
 ## Still in early development
 
@@ -17,13 +17,13 @@ The gem is only tested against the AU region currently.
 Add the following to your `Gemfile`:
 
 ```ruby
-gem "zeebox"
+gem "beamly"
 ```
 
-Add a file `config/initializers/zeebox.rb` containing:
+Add a file `config/initializers/beamly.rb` containing:
 
 ```
-Zeebox.configure do |config|
+Beamly.configure do |config|
   config.id = 'akdwad'
   config.key = '24144de132cb2d622bzxz60a90ggasffcc6c5c'
   config.region = 'AU'
@@ -35,22 +35,22 @@ At the moment you should include this file in your app.
 
 Here are the methods supported so far and a quick description.
 
-``Zeebox::Epg.regions`` returns an array of all of the regions.
+``Beamly::Epg.regions`` returns an array of all of the regions.
 
-``Zeebox::Epg.providers`` returns an array of all of the regions.
+``Beamly::Epg.providers`` returns an array of all of the regions.
 
-``Zeebox::Epg.catalogues(region, provider)`` returns an array of all of the catalogues. Provide a region id and provider id.
+``Beamly::Epg.catalogues(region, provider)`` returns an array of all of the catalogues. Provide a region id and provider id.
 
-``Zeebox::Epg.epg(id)`` returns an array of the epg. Id is from the catalogues reguest.
+``Beamly::Epg.epg(id)`` returns an array of the epg. Id is from the catalogues reguest.
 
-``Zeebox::Epg.schedule(id,date)`` returns an array of the schedules. Provide a service id from the epg request and a date in the format YYYY/MM/DD
+``Beamly::Epg.schedule(id,date)`` returns an array of the schedules. Provide a service id from the epg request and a date in the format YYYY/MM/DD
 
-``Zeebox::Epg.broadcast_event(id)`` returns an hash of a broadcast event. Provide an id from the schedule request
+``Beamly::Epg.broadcast_event(id)`` returns an hash of a broadcast event. Provide an id from the schedule request
 
-``Zeebox::Epg.episode(id)`` returns an hash of a episode event. Provide an id from the schedule request
+``Beamly::Epg.episode(id)`` returns an hash of a episode event. Provide an id from the schedule request
 
 ## Tests
 
 Include your api id and key as environment variables when running the tests
 
-``ZEEBOX_TEST_ID=xxx ZEEBOX_TEST_KEY=xxx bundle exec rspec``
+``BEAMLY_TEST_ID=xxx BEAMLY_TEST_KEY=xxx bundle exec rspec``

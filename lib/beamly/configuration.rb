@@ -1,4 +1,4 @@
-module Zeebox
+module Beamly
   class Configuration
 
     attr_accessor :id, :key, :region

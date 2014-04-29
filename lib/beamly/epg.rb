@@ -1,11 +1,11 @@
 require 'json'
 
-module Zeebox
+module Beamly
   class Epg
 
     class << self
       def get(url)
-        Zeebox::Client.get(url)
+        Beamly::Client.get(url)
       end
     end
 

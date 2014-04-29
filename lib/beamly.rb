@@ -1,11 +1,11 @@
-require 'zeebox/client'
-require 'zeebox/epg'
-require 'zeebox/configuration'
+require 'beamly/client'
+require 'beamly/epg'
+require 'beamly/configuration'
 require 'curb'
 require 'hashie'
 
-# Ruby toolkit for the Zeebox API
-module Zeebox
+# Ruby toolkit for the Beamly API
+module Beamly
 
   US = 'api'
   UK = 'api-uk'

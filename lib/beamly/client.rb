@@ -1,10 +1,10 @@
-module Zeebox
+module Beamly
   class Client
     EPG_URI = "/epg/1/"
     def self.get(url)
-      response = Curl.get(Zeebox.base_uri + EPG_URI + url) do |http|
-        http.headers['zeebox-app-id'] = Zeebox.configuration.id
-        http.headers['zeebox-app-key'] = Zeebox.configuration.key
+      response = Curl.get(Beamly.base_uri + EPG_URI + url) do |http|
+        http.headers['zeebox-app-id'] = Beamly.configuration.id
+        http.headers['zeebox-app-key'] = Beamly.configuration.key
         http.headers["Accept-Encoding"] = "gzip,deflate"
         http.follow_location = true
       end

@@ -1,13 +1,13 @@
 require_relative '../../spec_helper'
 
-describe Zeebox::Epg do
+describe Beamly::Epg do
 
-  let(:epg) { Zeebox::Epg.new }
+  let(:epg) { Beamly::Epg.new }
 
   #TODO: Set this in spec helper when used in more than one spec
-  Zeebox.configure do |config|
-    config.id = test_zeebox_id
-    config.key = test_zeebox_key
+  Beamly.configure do |config|
+    config.id = test_beamly_id
+    config.key = test_beamly_key
     config.region = 'AU'
   end
 

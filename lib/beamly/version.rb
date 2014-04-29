@@ -1,4 +1,4 @@
-module Zeebox
+module Beamly
 
   # Current version
   # @return [String]
