@@ -6,3 +6,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :test => :spec
 task :default => :spec
+
+task :console do
+  exec "pry -r zeebox -I ./lib"
+end

@@ -6,7 +6,7 @@ https://develop.zeebox.com/admin/applications
 
 ## Still in early development
 
-This gem is still in development and will change dramatically until it is released on ruby gems. Keep this in mind if you plan to use this in a production environment as its not recommended.
+This gem is still in development and will most likely change dramatically. Keep this in mind if you plan to use this in a production environment as its not recommended.
 
 The gem is only tested against the AU region currently.
 
