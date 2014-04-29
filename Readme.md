@@ -20,7 +20,7 @@ Add the following to your `Gemfile`:
 gem "zeebox"
 ```
 
-Add a file `config/initializers/zeebox.rb`` containing:
+Add a file `config/initializers/zeebox.rb` containing:
 
 ```
 Zeebox.configure do |config|
@@ -29,6 +29,7 @@ Zeebox.configure do |config|
   config.region = 'AU'
 end
 ```
+At the moment you should include this file in your app.
 
 ## Methods
 
