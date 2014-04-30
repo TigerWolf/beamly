@@ -1,5 +1,3 @@
-require 'json'
-
 module Beamly
   class Epg
 

@@ -1,8 +1,10 @@
 require 'beamly/client'
 require 'beamly/epg'
+require 'beamly/buzz'
 require 'beamly/configuration'
 require 'curb'
 require 'hashie'
+require 'json'
 
 # Ruby toolkit for the Beamly API
 module Beamly
