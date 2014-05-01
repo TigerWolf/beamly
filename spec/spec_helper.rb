@@ -17,9 +17,11 @@ VCR.configure do |c|
      test_beamly_key
   end
   c.default_cassette_options = {
-    :serialize_with => :json,
-    :record => :once
+    :serialize_with => :yaml,
+    :record => :once,
+    #:debug_logger => true
   }
+  c.debug_logger = File.open('record.log', 'w')
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
 end

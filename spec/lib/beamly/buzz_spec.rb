@@ -3,6 +3,7 @@ require_relative '../../spec_helper'
 describe Beamly::Buzz do
 
   let(:buzz) { Beamly::Buzz.new }
+  let(:epg) { Beamly::Epg.new }
 
   #TODO: Set this in spec helper when used in more than one spec
   Beamly.configure do |config|
@@ -18,7 +19,7 @@ describe Beamly::Buzz do
     end
 
     it "must return a hashie representation" do
-      expect(buzz.episode(1)).to be_a(Hashie::Mash)
+      expect(buzz.episode(885618)).to be_a(Hashie::Mash)
     end
 
   end

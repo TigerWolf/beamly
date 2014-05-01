@@ -1,14 +1,14 @@
 module Beamly
   class Buzz
 
-    class << self
-      def get(url)
-        Beamly::Client.get(url)
-      end
+    def prefix_url
+      "/buzz/1/"
     end
 
+    include Beamly::Client
+
     def episode(id)
-      self.class.get("au/episode/#{id}")
+      get("fts/au/episode/#{id}")
     end
 
   end
