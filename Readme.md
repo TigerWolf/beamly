@@ -35,19 +35,21 @@ At the moment you should include this file in your app.
 
 Here are the methods supported so far and a quick description.
 
-``Beamly::Epg.regions`` returns an array of all of the regions.
+``epg = Beamly::Epg.new``
 
-``Beamly::Epg.providers`` returns an array of all of the regions.
+``epg.regions`` returns an array of all of the regions.
 
-``Beamly::Epg.catalogues(region, provider)`` returns an array of all of the catalogues. Provide a region id and provider id.
+``epg.providers`` returns an array of all of the regions.
 
-``Beamly::Epg.epg(id)`` returns an array of the epg. Id is from the catalogues reguest.
+``epg.catalogues(region, provider)`` returns an array of all of the catalogues. Provide a region id and provider id.
 
-``Beamly::Epg.schedule(id,date)`` returns an array of the schedules. Provide a service id from the epg request and a date in the format YYYY/MM/DD
+``epg.epg(id)`` returns an array of the epg. Id is from the catalogues reguest.
 
-``Beamly::Epg.broadcast_event(id)`` returns an hash of a broadcast event. Provide an id from the schedule request
+``epg.schedule(id,date)`` returns an array of the schedules. Provide a service id from the epg request and a date in the format YYYY/MM/DD
 
-``Beamly::Epg.episode(id)`` returns an hash of a episode event. Provide an id from the schedule request
+``epg.broadcast_event(id)`` returns an hash of a broadcast event. Provide an id from the schedule request
+
+``epg.episode(id)`` returns an hash of a episode event. Provide an id from the schedule request
 
 ## Tests
 
