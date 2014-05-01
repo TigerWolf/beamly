@@ -1,0 +1,64 @@
+[webmock] Handling request: [get https://api-au.zeebox.com/buzz/1/fts/au/episode/885618] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/buzz/1/fts/au/episode/885618]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/regions] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/regions]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/regions] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/regions]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/regions] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/regions]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/regions] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/regions]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/providers] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/providers]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/providers] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/providers]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/providers] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/providers]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/au/providers] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/au/providers]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/which-catalogue?country=au&provider=1&region=48] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/which-catalogue?country=au&provider=1&region=48]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/which-catalogue?country=au&provider=1&region=48] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/which-catalogue?country=au&provider=1&region=48]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/which-catalogue?country=au&provider=1&region=48] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/which-catalogue?country=au&provider=1&region=48]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/epg/p1:r48] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/epg/p1:r48]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/epg/p1:r48] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/epg/p1:r48]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/epg/p1:r48] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/epg/p1:r48]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/service/469/2014/05/01]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/broadcastevent/14077656] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/broadcastevent/14077656]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/broadcastevent/14077656] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/broadcastevent/14077656]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/broadcastevent/14077656] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/broadcastevent/14077656]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]
+[webmock] Handling request: [get https://api-au.zeebox.com/epg/1/episode/469] (disabled: false)
+[webmock] Identified request type (recordable) for [get https://api-au.zeebox.com/epg/1/episode/469]

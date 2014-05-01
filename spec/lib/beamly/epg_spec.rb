@@ -176,7 +176,6 @@ describe Beamly::Epg do #, :vcr
     end
 
     it "must parse the api response and include the correct attributes" do
-      binding.pry
       methods = [
         "episode_id",
         "title",
