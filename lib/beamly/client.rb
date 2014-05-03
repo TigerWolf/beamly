@@ -14,7 +14,15 @@ module Beamly
       rescue Zlib::GzipFile::Error
         json = response.body_str
       end
-      result = JSON.parse json
+      begin
+        result = JSON.parse json
+      rescue JSON::ParserError
+        if response.response_code == 404
+          raise Beamly::NotFound
+        else
+          result = json
+        end
+      end
       if result.is_a? Array
         result.collect! { |x| x.is_a?(Hash) ? Hashie::Mash.new(x) : x }
       else
