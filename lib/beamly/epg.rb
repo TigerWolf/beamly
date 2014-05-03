@@ -8,15 +8,15 @@ module Beamly
     include Beamly::Client
 
     def regions
-      get('au/regions')
+      get( Beamly.configuration.region.downcase + '/regions')
     end
 
     def providers
-      get('au/providers')
+      get(Beamly.configuration.region.downcase + '/providers')
     end
 
     def catalogues(region, provider)
-      url = Curl::urlalize("which-catalogue?", {:country => 'au', :region => region, :provider => provider})
+      url = Curl::urlalize("which-catalogue?", {:country => Beamly.configuration.region.downcase, :region => region, :provider => provider})
       get("#{url}")
     end
 

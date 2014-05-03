@@ -8,7 +8,7 @@ module Beamly
     include Beamly::Client
 
     def episode(id)
-      get("fts/au/episode/#{id}")
+      get("fts/#{Beamly.configuration.region.downcase}/episode/#{id}")
     end
 
   end
