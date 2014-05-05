@@ -22,12 +22,8 @@ describe Beamly::Buzz do
       expect{buzz.episode(1)}.to raise_error(Beamly::NotFound)
     end
 
-    before {
-      episode_id = epg.schedule(469).first.eid
-    }
-
     it "must return a hashie representation" do
-
+      episode_id = epg.schedule(469).first.eid
       expect(buzz.episode(episode_id)).to be_a(Hashie::Mash)
     end
 
@@ -39,9 +35,9 @@ describe Beamly::Buzz do
       expect(buzz).to respond_to :current
     end
 
-    # check for sending macro-region
-    # with hero
-    # filtered
+    it "must have a current buzz" do
+      buzz.current('Australia/Adelaide') > 0
+    end
 
   end
 

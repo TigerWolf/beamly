@@ -11,6 +11,14 @@ module Beamly
       get("fts/#{Beamly.configuration.region.downcase}/episode/#{id}")
     end
 
+    def current(macro_region)
+      get("prevnownext?tvc=#{Beamly.configuration.region.downcase}&macro-region=#{macro_region}")
+    end
+
+    def broadcast
+      get("buzz")
+    end
+
   end
 
 end
