@@ -19,9 +19,39 @@ describe Beamly::Buzz do
     end
 
     it "must return a hashie representation" do
-      expect(buzz.episode(885618)).to be_a(Hashie::Mash)
+      expect{buzz.episode(1)}.to raise_error(Beamly::NotFound)
     end
 
+    before {
+      episode_id = epg.schedule(469).first.eid
+    }
+
+    it "must return a hashie representation" do
+
+      expect(buzz.episode(episode_id)).to be_a(Hashie::Mash)
+    end
+
+  end
+
+  describe "GET current buzz " do
+
+    it "must have a current method" do
+      expect(buzz).to respond_to :current
+    end
+
+    # check for sending macro-region
+    # with hero
+    # filtered
+
+  end
+
+  describe "GET buzz by broadcast" do
+
+    it "must have a broadcast method" do
+      expect(buzz).to respond_to :broadcast
+    end    
+
+    # check for sending query object
   end
 
 end
