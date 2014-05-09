@@ -36,18 +36,27 @@ describe Beamly::Buzz do
     end
 
     it "must have a current buzz" do
-      buzz.current('Australia/Adelaide') > 0
+      expect(buzz.current('Australia/Adelaide').count).to be > 0
     end
 
   end
 
-  describe "GET buzz by broadcast" do
+  # describe "GET buzz by broadcast" do
 
-    it "must have a broadcast method" do
-      expect(buzz).to respond_to :broadcast
-    end    
+  #   it "must have a broadcast method" do
+  #     expect(buzz).to respond_to :broadcast
+  #   end    
 
-    # check for sending query object
-  end
+  #   it "must have a current buzz" do
+  #     broadcast_event_id = epg.schedule(469,Date.today + 1).first.bce
+  #     expect(buzz.broadcast([broadcast_event_id]).count).to be > 0
+  #   end
+
+  #   it "must have a current buzz" do
+  #     broadcast_event_id = epg.schedule(469).first.bce
+  #     broadcast_event_id_2 = epg.schedule(469)[1].bce
+  #     expect(buzz.broadcast([broadcast_event_id,broadcast_event_id_2]).count).to be > 0
+  #   end
+  # end
 
 end

@@ -15,9 +15,9 @@ module Beamly
       get("prevnownext?tvc=#{Beamly.configuration.region.downcase}&macro-region=#{macro_region}")
     end
 
-    def broadcast
-      get("buzz")
-    end
+    # def broadcast(broadcast_events)
+    #   get("buzz?tvc=#{Beamly.configuration.region.downcase}&broadcast_events=#{broadcast_events.join(',')}")
+    # end
 
   end
 
