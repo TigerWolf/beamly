@@ -18,6 +18,7 @@ module Beamly
         result = JSON.parse json
       rescue JSON::ParserError
         if response.response_code == 404
+          binding.pry
           raise Beamly::NotFound
         else
           result = json
