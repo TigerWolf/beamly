@@ -6,11 +6,11 @@ Create an account on the beamly developers website to get your api keys.
 
 https://develop.beamly.com/admin/applications
 
-## Still in early development
+## Contributing
 
-This gem is still in development and will most likely change dramatically. Keep this in mind if you plan to use this in a production environment as its not recommended.
+Feel free to create a pull request as per usual github process.
 
-The gem is only tested against the AU region currently.
+Let me know if you are using this gem for your project and any features you would like, as this gem does not expose all of the api (it can be easily addeD). I only created this for the features I needed in the app I was creating at the time.
 
 ## Installation
 
