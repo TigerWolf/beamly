@@ -6,11 +6,11 @@ Create an account on the beamly developers website to get your api keys.
 
 https://develop.beamly.com/admin/applications
 
-## Still in early development
+## Contributing
 
-This gem is still in development and will most likely change dramatically. Keep this in mind if you plan to use this in a production environment as its not recommended.
+Feel free to create a pull request as per usual github process.
 
-The gem is only tested against the AU region currently.
+Let me know if you are using this gem for your project and any features you would like, as this gem does not expose all of the api (it can be easily addeD). I only created this for the features I needed in the app I was creating at the time.
 
 ## Installation
 
@@ -35,19 +35,21 @@ At the moment you should include this file in your app.
 
 Here are the methods supported so far and a quick description.
 
-``Beamly::Epg.regions`` returns an array of all of the regions.
+``epg = Beamly::Epg.new``
 
-``Beamly::Epg.providers`` returns an array of all of the regions.
+``epg.regions`` returns an array of all of the regions.
 
-``Beamly::Epg.catalogues(region, provider)`` returns an array of all of the catalogues. Provide a region id and provider id.
+``epg.providers`` returns an array of all of the regions.
 
-``Beamly::Epg.epg(id)`` returns an array of the epg. Id is from the catalogues reguest.
+``epg.catalogues(region, provider)`` returns an array of all of the catalogues. Provide a region id and provider id.
 
-``Beamly::Epg.schedule(id,date)`` returns an array of the schedules. Provide a service id from the epg request and a date in the format YYYY/MM/DD
+``epg.epg(id)`` returns an array of the epg. Id is from the catalogues reguest.
 
-``Beamly::Epg.broadcast_event(id)`` returns an hash of a broadcast event. Provide an id from the schedule request
+``epg.schedule(id,date)`` returns an array of the schedules. Provide a service id from the epg request and a date in the format YYYY/MM/DD
 
-``Beamly::Epg.episode(id)`` returns an hash of a episode event. Provide an id from the schedule request
+``epg.broadcast_event(id)`` returns an hash of a broadcast event. Provide an id from the schedule request
+
+``epg.episode(id)`` returns an hash of a episode event. Provide an id from the schedule request
 
 ## Tests
 

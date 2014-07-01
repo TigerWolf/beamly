@@ -1,17 +1,28 @@
 module Beamly
-  class Client
-    EPG_URI = "/epg/1/"
-    def self.get(url)
-      response = Curl.get(Beamly.base_uri + EPG_URI + url) do |http|
+  module Client
+    
+    def get(url)
+      response = Curl.get(Beamly.base_uri + self.prefix_url + url) do |http|
         http.headers['zeebox-app-id'] = Beamly.configuration.id
         http.headers['zeebox-app-key'] = Beamly.configuration.key
         http.headers["Accept-Encoding"] = "gzip,deflate"
         http.follow_location = true
       end
-      return "" if response.body_str.empty?
-      gz = Zlib::GzipReader.new(StringIO.new(response.body_str))
-      json = gz.read
-      result = JSON.parse json
+      begin
+        gz = Zlib::GzipReader.new(StringIO.new(response.body_str))
+        json = gz.read
+      rescue Zlib::GzipFile::Error
+        json = response.body_str
+      end
+      begin
+        result = JSON.parse json
+      rescue JSON::ParserError
+        if response.response_code == 404
+          raise Beamly::NotFound
+        else
+          result = json
+        end
+      end
       if result.is_a? Array
         result.collect! { |x| x.is_a?(Hash) ? Hashie::Mash.new(x) : x }
       else

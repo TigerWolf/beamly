@@ -1,8 +1,11 @@
 require 'beamly/client'
 require 'beamly/epg'
+require 'beamly/buzz'
 require 'beamly/configuration'
+require 'beamly/error'
 require 'curb'
 require 'hashie'
+require 'json'
 
 # Ruby toolkit for the Beamly API
 module Beamly
@@ -25,6 +28,7 @@ module Beamly
     alias_method :config, :configuration
 
     def base_uri
+      region = AU
       if ['US','UK','AU'].include? @configuration.region
         region = self.const_get(@configuration.region)
       end

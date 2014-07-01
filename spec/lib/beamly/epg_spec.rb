@@ -1,6 +1,6 @@
 require_relative '../../spec_helper'
 
-describe Beamly::Epg do
+describe Beamly::Epg do #, :vcr  
 
   let(:epg) { Beamly::Epg.new }
 
@@ -109,6 +109,11 @@ describe Beamly::Epg do
     it "must parse the api response from JSON to Array" do
       expect(epg.schedule(469,date)).to be_a(Array)
     end
+
+    it "must parse the api response from JSON to Array without a date passed" do
+      expect(epg.schedule(469)).to be_a(Array)
+    end
+
 
     it "must parse the api response from JSON to Hash" do
       expect(epg.schedule(469,date).first).to be_a(Hashie::Mash)
