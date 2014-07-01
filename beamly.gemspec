@@ -5,8 +5,8 @@ require 'beamly/version'
 
 Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.0'
-  spec.add_dependency "curb"
-  spec.add_dependency "hashie"
+  spec.add_dependency "curb",'~> 0'
+  spec.add_dependency "hashie",'~> 3.0'
   spec.add_development_dependency "rake"
   spec.authors = ["Kieran Anddrews"]
   spec.description = %q{Simple wrapper for the Beamly API}
