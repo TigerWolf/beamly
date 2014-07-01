@@ -8,7 +8,7 @@ module Beamly
     include Beamly::Client
 
     def regions
-      get( Beamly.configuration.region.downcase + '/regions')
+      get(Beamly.configuration.region.downcase + '/regions')
     end
 
     def providers
